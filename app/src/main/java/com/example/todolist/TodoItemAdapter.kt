@@ -1,5 +1,6 @@
 package com.example.todolist
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,8 +33,15 @@ class TodoItemAdapter : RecyclerView.Adapter<TodoItemAdapter.TodoItemHolder>() {
         return todoItems.size
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun addTodo(item: TodoItem) {
         todoItems.add(item)
+        notifyDataSetChanged()
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun clearRecyclerView(){
+        todoItems.clear()
         notifyDataSetChanged()
     }
 
