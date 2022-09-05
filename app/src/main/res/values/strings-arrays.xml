@@ -1,7 +1,7 @@
 <resources>
     <string-array name="importanceSpinnerArray">
-        <item>Нет</item>
-        <item>Низкая</item>
-        <item>!! Высокая</item>
+        <item><font color="@color/black">Нет</font></item>
+        <item><font color="@color/black">Низкая</font></item>
+        <item><font color="@color/red"><b>!!Высокая</b> </font></item>
     </string-array>
 </resources>
