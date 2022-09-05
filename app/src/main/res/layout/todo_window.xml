@@ -114,23 +114,25 @@
         app:layout_constraintTop_toBottomOf="@+id/makeUpToTextView" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:tint="@color/red"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/textDate"
-        app:srcCompat="@drawable/baseline_delete_black_36" />
+        app:srcCompat="@drawable/baseline_delete_black_36"
+        tools:ignore="UseAppTint" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Удалить"
-        android:textColor="#FF3B30"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3" />
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteButton"
+        app:layout_constraintStart_toEndOf="@+id/deleteButton"
+        app:layout_constraintTop_toTopOf="@+id/deleteButton" />
 
     <Switch
         android:id="@+id/switchCalendar"
