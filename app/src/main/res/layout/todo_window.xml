@@ -40,7 +40,7 @@
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/closeTodoWindow"
         tools:ignore="MissingClass,MissingConstraints">
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -53,7 +53,7 @@
     </androidx.cardview.widget.CardView>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/closeTodoWindow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

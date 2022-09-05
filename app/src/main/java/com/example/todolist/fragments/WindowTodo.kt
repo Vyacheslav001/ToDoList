@@ -26,6 +26,15 @@ class WindowTodo : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //TODO вынести в отдельный метод
+        //кнопка закрытия текущего окна
+        binding.closeTodoWindow.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(id, TodoList.newInstance())
+                .addToBackStack("")
+                .commit()
+        }
+
         //TODO вынести код из onViewCreated
         with(binding) {
             context?.let {

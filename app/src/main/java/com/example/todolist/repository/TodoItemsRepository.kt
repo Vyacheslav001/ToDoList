@@ -39,7 +39,6 @@ class TodoItemsRepository() {
         return listTodo
     }
 
-
 //    fun getTodoItems() = listOf(
 //        TodoItem("1", "Написать приложение", "срочная", "03012000", true, "01012000", "02012000"),
 //        TodoItem("2", "Прочитать книгу", "срочная", "03012000", true, "01012000", "02012000"),

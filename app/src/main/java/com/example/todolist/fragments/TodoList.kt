@@ -30,7 +30,9 @@ class TodoList : Fragment(), View.OnClickListener {
         //TODO вынести в отдельный метод
         binding.fab.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(id, WindowTodo.newInstance()).addToBackStack("").commit()
+                .replace(id, WindowTodo.newInstance())
+                .addToBackStack("")
+                .commit()
         }
     }
 
