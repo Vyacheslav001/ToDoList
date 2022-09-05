@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.example.todolist.R
 import com.example.todolist.databinding.TodoWindowBinding
+import com.example.todolist.replaceFragment
 
 class WindowTodo : Fragment() {
     private var _binding: TodoWindowBinding? = null
@@ -29,10 +30,7 @@ class WindowTodo : Fragment() {
         //TODO вынести в отдельный метод
         //кнопка закрытия текущего окна
         binding.closeTodoWindow.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(id, TodoList.newInstance())
-                .addToBackStack("")
-                .commit()
+            replaceFragment(TodoList.newInstance())
         }
 
         //TODO вынести код из onViewCreated

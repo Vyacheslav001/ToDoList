@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.todolist.TodoItemAdapter
 import com.example.todolist.databinding.ListTodoBinding
+import com.example.todolist.replaceFragment
 import com.example.todolist.repository.TodoItemsRepository
 
 class TodoList : Fragment(), View.OnClickListener {
@@ -29,10 +30,7 @@ class TodoList : Fragment(), View.OnClickListener {
 
         //TODO вынести в отдельный метод
         binding.fab.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(id, WindowTodo.newInstance())
-                .addToBackStack("")
-                .commit()
+            replaceFragment(WindowTodo.newInstance())
         }
     }
 

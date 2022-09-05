@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F6F2">
+    android:background="@color/primary">
 
     <CalendarView
         android:id="@+id/calendar"
@@ -58,19 +58,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:contentDescription="TODO"
+        android:background="@color/primary"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/btn_dialog" />
+        app:srcCompat="@drawable/outline_close_black_36" />
 
     <Button
         android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:background="@color/primary"
+        android:textColor="@color/blue"
         android:text="Сохранить"
         android:textSize="@dimen/textSize20"
+        app:layout_constraintBottom_toBottomOf="@+id/closeTodoWindow"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/closeTodoWindow" />
 
     <TextView
         android:id="@+id/importanceTextView"
@@ -113,26 +116,19 @@
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/makeUpToTextView" />
 
-    <ImageButton
-        android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:tint="@color/red"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/textDate"
-        app:srcCompat="@drawable/baseline_delete_black_36"
-        tools:ignore="UseAppTint" />
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/baseline_delete_black_36"
+        android:drawableTint="@color/red"
         android:text="Удалить"
+        android:background="@color/primary"
         android:textColor="@color/red"
-        app:layout_constraintBottom_toBottomOf="@+id/deleteButton"
-        app:layout_constraintStart_toEndOf="@+id/deleteButton"
-        app:layout_constraintTop_toTopOf="@+id/deleteButton" />
+        android:textSize="@dimen/textSize20"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/textDate" />
 
     <Switch
         android:id="@+id/switchCalendar"
